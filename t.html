@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick Cook</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: #ff5e57;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('https://images.unsplash.com/photo-1490645935967-10de6ba17061');
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #ff5e57;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+}
+
+.contact input, .contact textarea {
+    width: 250px;
+    margin: 10px;
+    padding: 10px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>Quick Cook 🍳</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h1>Cook Fast, Eat Smart</h1>
+    <p>Simple & delicious recipes in minutes</p>
+    <button class="btn" onclick="scrollToSection()">Explore Recipes</button>
+</section>
+
+<section id="recipes" class="section">
+    <h2>Popular Recipes 🍔</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Pasta</h3>
+            <p>Ready in 10 minutes</p>
+        </div>
+
+        <div class="card">
+            <h3>Burger</h3>
+            <p>Juicy & tasty</p>
+        </div>
+
+        <div class="card">
+            <h3>Pizza</h3>
+            <p>Cheesy and hot</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section contact">
+    <h2>Contact Us 📩</h2>
+
+    <input type="text" placeholder="Your Name"><br>
+    <input type="email" placeholder="Your Email"><br>
+    <textarea placeholder="Your Message"></textarea><br>
+
+    <button class="btn">Send</button>
+</section>
+
+<footer>
+    <p>© 2026 Quick Cook - All Rights Reserved</p>
+</footer>
+
+<script>
+function scrollToSection() {
+    document.getElementById("recipes").scrollIntoView();
+}
+</script>
+
+</body>
+</html>
